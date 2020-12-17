@@ -4,6 +4,7 @@
   "description": "Server of Miuna shoutbox for Mybb",
   "dependencies" : {
 	"socket.io": "~1.4.8",
+	"socketio-jwt": "~4.0.1",
 	"express" : "~4.14.0",
 	"ejs" : "~2.5.2",
 	"mongoose" : "~5.0.0",
