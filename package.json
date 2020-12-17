@@ -1,7 +1,7 @@
 {
-  "name": "MiunaShoutboxServer",
+  "name": "RaidForumsSB",
   "version": "9.2.0",
-  "description": "Server of Miuna shoutbox for Mybb",
+  "description": "Shit Fucking Shoutbox Server",
   "dependencies" : {
 	"socket.io": "~1.4.8",
 	"socketio-jwt": "~4.0.1",
