@@ -1,0 +1,2 @@
+Remember that all variables are stored in the database smh.
+Thus why settings and such were deleted.

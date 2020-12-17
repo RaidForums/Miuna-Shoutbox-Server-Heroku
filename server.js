@@ -74,7 +74,7 @@ function startall() {
 		res.render('index.ejs'); // load the index.ejs file
 	});
 
-	app.get('/sucess', function(req, res) {
+	/*app.get('/sucess', function(req, res) {
 		res.render('sucess.ejs'); // load the index.ejs file
 	});
 
@@ -100,7 +100,7 @@ function startall() {
 	app.post('/settings', function(req, res) {
 		res.redirect('/sucess');
 		conf.saveconfig(req);
-	});
+	});*/
 
 	app.post('/newposthread', function(req, res){
 		jwt.verify(req.body.token, secret_st, function(err, decoded) {
