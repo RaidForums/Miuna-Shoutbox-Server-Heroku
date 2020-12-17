@@ -292,7 +292,7 @@ function startall() {
 				data["tk_uid"] = socket.decoded_token.uid;
 				data["tk_mod"] = socket.decoded_token.mod;
 				data["tk_edtp"] = socket.decoded_token.edtprv;
-				data["tk_eduser"] = socket.decoded_token.username;
+				data["tk_eduser"] = socket.decoded_token.user;
 				if (data.newmsg.length>parseInt(chrlimit)) {
 					data["newmsg"] = data.newmsg.slice(0, parseInt(chrlimit));
 				}
