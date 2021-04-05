@@ -1,96 +1,23 @@
+<!-- views/index.ejs -->
+<!doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
-<link href="https://cdn.raidforums.com/favicon.ico" rel="icon" type="image/x-icon">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<style type="text/css">
-video#video { 
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  transform: translateX(-50%) translateY(-50%);
-  background-size: cover;
-  background-image: url(https://cdn.raidforums.com/s/l.gif);
-  background-repeat: no-repeat;
-  background-size: 120px 120px;
-  background-position: 50% 70%;
-}
-#buttonbar {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  filter: invert(100%);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: pointer;
-  cursor: hand;
-}
-body {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-</style>
-<title>RaidForums' Shoutbox Server</title>
+	<title>Miuna Shoutbox Server 9.2 ACP</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<style>
+		body		{ padding-top:80px; }
+	</style>
 </head>
-<body bgcolor="#000000">
-<center><h1 style="color:white;"><b>RaidForums' Shoutbox Server</b></h1></center>
-<div id="buttonbar">
-<i class="material-icons" id="mute" onclick="mute()">volume_up</i>
-<i class="material-icons" id="play" onclick="vidplay()">pause</i>
-<i class="material-icons" id="next" onclick="rotate_video()">skip_next</i>
+<body>
+<div class="container">
+
+	<div class="jumbotron text-center">
+		<h2><span class="fa fa-lock"></span> Miuna Shoutbox Server 9.2 ACP</h2>
+
+		<a href="/settings" class="btn btn-default"><span class="fa fa-user"></span> Server Configuration</a>
+	</div>
+
 </div>
-<video id="video" preload="auto" autoplay src="https://cdn.raidforums.com/t.mp4" type="video/mp4" />
-<script type="text/javascript">
-  var index = 1;
-  playlist = ['https://cdn.raidforums.com/t.mp4', 'https://cdn.raidforums.com/z.mp4', 'https://cdn.raidforums.com/k.mp4', 'https://cdn.raidforums.com/x.mp4', 'https://cdn.raidforums.com/f.mp4', 'https://cdn.raidforums.com/o.mp4'];
-  video = document.getElementById('video');
-
-  video.volume = 0.65;
-  video.addEventListener('ended', rotate_video, false);
-
-  function rotate_video() {
-    video.setAttribute('src', playlist[index]);
-	video.load();
-	video.volume = 0.65;
-    index++;
-    if (index >= playlist.length) { index = 0; }
-  }
-  
-  function vidplay() {
-    var i = document.getElementById("play");
-    if (video.paused) {
-       video.play();
-       i.textContent = 'pause';
-    } else {
-       video.pause();
-       i.textContent = 'play_arrow';
-    }
-  }
-  
-  function mute() {
-	var i = document.getElementById("mute");
-	if (video.muted == true) {
-       video.muted = false;
-       i.textContent = 'volume_up';
-    } else {
-       video.muted = true;
-       i.textContent = 'volume_off';
-    }
-  }
-</script>
 </body>
 </html>
